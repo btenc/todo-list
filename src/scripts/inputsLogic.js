@@ -70,7 +70,6 @@ function addTaskFromInputs() {
   let priority = priorityInput.value;
 
   taskList.addTask(title, description, dueDate, priority, "Incomplete");
-  taskList.sortBy();
   initDisplay();
 }
 

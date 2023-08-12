@@ -14,7 +14,7 @@ function initDisplay() {
   } else if (taskList.filter == "week-tasks") {
 
   } else if (taskList.filter == "today") {
-    
+
   }
 
   function createTask(item, index) {
@@ -37,7 +37,7 @@ function initDisplay() {
     let dueDate = document.createElement("p");
     dueDate.textContent = item.dueDate;
     let priority = document.createElement("p");
-    priority.textContent = item.priority;
+    priority.textContent = ("Priority:",item.priority);
     taskCard.classList.add(item.priority);
 
     taskInfoContainer.appendChild(title);
