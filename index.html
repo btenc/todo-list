@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
-  <script defer src="main.js?88700204e7c49ca67582"></script></head>
+  <script defer src="main.js?f0e2c8a9405615d93d29"></script></head>
   <body>
     <div id="container">
       <h1 id="header">
@@ -14,7 +14,30 @@
         </div>
       </h1>
       <div id="sidebar">
-        <div id="formContainer" class="hidden">
+        <h2 class="header">Tasks</h2>
+        <div id="filter-container">
+            <form id="filter-form">
+                <h3 class="filter-options">Filter:</h3>
+                <input type="radio" checked id="all-tasks" name="filter" value="all-tasks">
+                <label for="all-tasks">All Tasks</label><br>
+                <input type="radio" id="today" name="filter" value="today">
+                <label for="today">Today</label><br>
+                <input type="radio" id="week-tasks" name="filter" value="week-tasks">
+                <label for="week-tasks">Next 7 Days</label>
+                <button type="button" id="apply-button" class="button">
+                    Apply
+                </button>
+            </form>
+            <div id="sort-buttons">
+                <h3 class="sort-options">Sort By:</h3>
+                <button type="button" id="date-sort" class="button sort-button">Date</button>
+                <button type="button" id="priority-sort" class="button sort-button">Priority</button>
+            </div>
+
+
+        </div>
+        <div id="form-container">
+          <button id="toggle-button" class="hidden">Add Task</button>
           <form id="add-task-form">
             <h2 class="header">Add a Task!</h2>
             <div class="form-item">
