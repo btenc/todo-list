@@ -1,22 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
-<script defer src="main.js?76f2fedfb301c1608135"></script></head>
-<body>
+  <script defer src="main.js?88700204e7c49ca67582"></script></head>
+  <body>
     <div id="container">
-        <div id="sidebar">
-            Temp
+      <h1 id="header">
+        <div class="header-text">
+          <p>What's</p>
+          <p>TODO?</p>
         </div>
-        <div id="task-board">
-            <div class="task-card"></div>
-            <div class="task-card"></div>
-            <div class="task-card"></div>
-
+      </h1>
+      <div id="sidebar">
+        <div id="formContainer" class="hidden">
+          <form id="add-task-form">
+            <h2 class="header">Add a Task!</h2>
+            <div class="form-item">
+              <label for="title">Title:</label>
+              <input type="text" id="title" name="title" required />
+            </div>
+            <div class="form-item">
+              <label for="description">Description:</label>
+              <input type="text" id="description" name="description" required />
+            </div>
+            <div class="form-item">
+              <label for="due-date">Due Date:</label>
+              <input type="date" id="due-date" name="due-date" required />
+            </div>
+            <div class="form-item">
+              <label for="priority">Priority:</label>
+              <input
+                type="range"
+                min="1"
+                max="10"
+                value="5"
+                class="slider"
+                id="priority"
+              />
+              <output id="priority-output">5</output>
+            </div>
+            <div class="buttons">
+              <button disabled type="button" id="submit-button" class="button">
+                Submit
+              </button>
+              <button
+                type="button"
+                id="cancel-button"
+                class="button toggle-buttons"
+              >
+                Cancel
+              </button>
+              <button type="button" id="reset-button" class="button">
+                Reset
+              </button>
+            </div>
+          </form>
         </div>
+      </div>
+      <div id="task-board">
+        <div class="task-card"></div>
+        <div class="task-card"></div>
+        <div class="task-card"></div>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
