@@ -1,6 +1,8 @@
 class Tasks {
   constructor() {
     this.taskList = [];
+    this.sortType = "date";
+    this.filter = "all-tasks";
   }
 
   getTask(index) {
@@ -21,6 +23,9 @@ class Tasks {
   getProgress(index) {
     return this.taskList[index].progress;
   }
+  getSortType() {
+    return this.sortType;
+  }
 
   changePriority(index, set) {
     this.taskList[index].priority = set;
@@ -36,6 +41,35 @@ class Tasks {
   removeTask(index) {
     this.taskList.splice(index, 1);
   }
+
+  sortTasks() {
+    if (this.sortType == "date") {
+      this.taskList.sort(this.sortDates);
+    } else if (this.sortType == "priority") {
+      this.taskList.sort(this.sortPriority);
+    }
+  }
+
+  sortDates(a, b) {
+    if (a.dueDate < b.dueDate) {
+      return -1;
+    }
+    if (a.dueDate > b.dueDate) {
+      return 1;
+    }
+    return 0;
+  }
+
+  sortPriority(a, b) {
+    console.log("test");
+    if (a.priority < b.priority) {
+      return -1;
+    }
+    if (a.priority > b.priority) {
+      return 1;
+    }
+    return 0;
+  }
 }
 
 class Task {
@@ -49,6 +83,10 @@ class Task {
 }
 
 const taskList = new Tasks();
-taskList.addTask("Wordfsk", "do work", "11/3/23", 3, "Incomplete");
+taskList.addTask("Wordfsk", "do work", "2025-01-05", 3, "Incomplete");
+taskList.addTask("Wordfsk", "do work", "2022-02-05", 2, "Incomplete");
+taskList.addTask("Wordfsk", "do work", "2022-06-05", 5, "Incomplete");
+taskList.addTask("Wordfsk", "do work", "2022-03-05", 1, "Incomplete");
+taskList.addTask("Wordfsk", "do work", "2021-01-05", 9, "Incomplete");
 
 export default taskList;

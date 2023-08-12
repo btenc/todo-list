@@ -2,6 +2,10 @@
     --alt-text-color: green;
 }
 
+.hidden{
+    display: none;
+}
+
 #task-board{      
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
