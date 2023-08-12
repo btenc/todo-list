@@ -1,4 +1,7 @@
 import 'normalize.css';
 import './style.css';
 
-console.log("this is a test");
+import initDisplay from "./scripts/tasksDisplay";
+
+initDisplay();
+

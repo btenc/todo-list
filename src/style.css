@@ -1,0 +1,27 @@
+#task-board{      
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+
+    max-width: 1000px;
+}
+
+.task-card{
+    background-color: gray;
+    max-height: 400px;
+}
+
+#sidebar{
+    min-width: 100px;
+}
+
+#container{
+    width: 100vw;
+    height: 100vh;
+      
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+}
