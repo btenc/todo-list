@@ -95,6 +95,7 @@ function toggleHidden() {
 
 function resetForm() {
   form.reset();
+  priorityOutput.innerHTML = priorityInput.value;
 }
 
 export default listenersInit;

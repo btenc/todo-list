@@ -35,9 +35,9 @@ function initDisplay() {
     let description = document.createElement("p");
     description.textContent = item.description;
     let dueDate = document.createElement("p");
-    dueDate.textContent = item.dueDate;
+    dueDate.textContent = ("Due: "+item.dueDate);
     let priority = document.createElement("p");
-    priority.textContent = ("Priority:",item.priority);
+    priority.textContent = ("Priority: "+item.priority);
     taskCard.classList.add(item.priority);
 
     taskInfoContainer.appendChild(title);

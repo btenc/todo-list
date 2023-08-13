@@ -1,7 +1,11 @@
 :root{
+    font-size: 22px;
     font-family: 'Open Sans',sans-serif;
     --alt-color: #6c584c;
-    background-color: #f0ead2;
+    --bg-color: #f0ead2;
+    --card-color: #ddb892;
+
+    background-color: var(--bg-color);
 }
 
 .hidden{
@@ -15,33 +19,60 @@
 
     padding-top: 0px;
     padding-bottom: 30px;
-    padding-left: 10px;
+    padding-left: 15px;
     padding-right: 50px;
 }
 
 .task-card{
-    background-color: #ddb892;
+    background-color: var(--card-color);
     border: 3px solid var(--alt-color);
-    max-height: 250px;
-    min-height: 180px;
+    height: fit-content;
+    min-height: 100px;
     margin-top: 10px;
     border-radius: 4rem;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+
     display: flex;
+    gap: 20px;
     justify-content: space-between;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    text-align: center;
+}
+
+.task-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.task-info>h2{
+    margin-top: 0;
+}
+
+.task-info:nth-child(2){
+    justify-self: flex-end;
 }
 
 h2{
     width: auto;
     text-decoration: underline;
     text-decoration-color: var(--alt-color);
-    text-decoration-style: wavy;
+    text-decoration-style: solid;
     border-radius: 99rem;
+    margin-bottom: 4px;
 }
 
 #sidebar{
-    min-width: 210px;
+    min-width: 270px;
     grid-row-start: 2;
     border-radius: .5rem;
     display: flex;
@@ -51,6 +82,36 @@ h2{
     background-color: #e6ccb2;
     border-right: 3px solid var(--alt-color);
 }
+
+#filter-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#add-task-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-item{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-item>output{
+    width: 200px;
+}
+
+#priority-output{
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding-bottom: 5px;
+}
+
+
 
 #main{
     width: 100vw;
@@ -63,11 +124,13 @@ h2{
       
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: .4fr 1fr;
     gap: 0px;
 }
 
 #header{
+    background-color: var(--bg-color);
+    position: sticky; top: 0;
     display: flex;
     grid-column: 1/-1;
     justify-content: center;
@@ -96,3 +159,85 @@ p{
 #task-board{
     grid-row-start: 2;
 }
+
+
+
+
+
+button {
+    background-color: #fff000;
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 10px;
+    text-align: center;
+    transition: 200ms;
+    width: 150px;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 1rem;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  button:not(:disabled):hover,
+  button:not(:disabled):focus {
+    outline: 0;
+    background: #f4e603;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+  }
+  
+  button:disabled {
+    filter: saturate(0.2) opacity(0.5);
+    -webkit-filter: saturate(0.2) opacity(0.5);
+    cursor: not-allowed;
+  }
+
+  input[type="radio"] {
+    appearance: none;
+  }
+
+  input[type="radio"] {
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    /* Adjusts the position of the checkboxes on the text baseline */
+    vertical-align: -2px;
+    outline: none;
+  }
+
+  input[type="radio"]::before {
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: var(--alt-color);
+    font-size: 1.2em;
+    transform: translate(3px, 3px) scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in;
+  }
+
+  input[type="radio"]:checked::before {
+    transform: translate(3px, 3px) scale(1);
+    transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+  }
+
+  input[type="text"], 
+  input[type="date"],  
+  select {
+    min-width: 3rem;
+    width: 14rem;
+    border-radius: .5rem;
+  }
+
+  input[type="range"] {
+    background-color: #434343;
+    width: 14rem;
+    margin-bottom: 10px;
+  }
