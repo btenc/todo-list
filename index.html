@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
-  <script defer src="main.js?b7b12a15d965683e3b37"></script></head>
+  <script defer src="main.js?1756461618fbebfc8273"></script></head>
   <body>
     <div id="container">
       <h1 id="header">
@@ -17,16 +17,22 @@
         <div id="filter-container">
             <form id="filter-form">
                 <h2 class="filter-options">Filter:</h2>
-                <input type="radio" checked id="all-tasks" name="filter" value="all-tasks">
-                <label for="all-tasks">All Tasks</label><br>
-                <input type="radio" id="today" name="filter" value="today">
-                <label for="today">Today</label><br>
-                <input type="radio" id="week-tasks" name="filter" value="week-tasks">
-                <label for="week-tasks">Next 7 Days</label>
-                <button type="button" id="apply-button" class="button">
-                    Apply
-                </button>
+                <div class="filter-item">
+                  <input type="radio" checked id="all-tasks" name="filter" value="all-tasks">
+                  <label for="all-tasks">All Tasks</label><br>
+                </div>
+                <div class="filter-item">
+                  <input type="radio" id="today" name="filter" value="today">
+                  <label for="today">Today</label><br>
+                </div>
+                <div class="filter-item">
+                  <input type="radio" id="week-tasks" name="filter" value="week-tasks">
+                  <label for="week-tasks">Next 7 Days</label>
+                </div>
             </form>
+            <button type="button" id="apply-button" class="button">
+              Apply
+            </button>
             <div id="sort-buttons">
                 <h2 class="sort-options">Sort By:</h2>
                 <button type="button" id="date-sort" class="button sort-button">Date</button>
@@ -34,7 +40,8 @@
             </div>
         </div>
         <div id="form-container">
-          <button id="toggle-button" class="hidden">Add Task</button>
+          <h2 class="header hidden">Add a Task:</h2>
+          <button id="toggle-button" class="hidden">New Task</button>
           <form id="add-task-form">
             <h2 class="header">Add a Task:</h2>
             <div class="form-item">
@@ -58,7 +65,20 @@
                 value="5"
                 class="slider"
                 id="priority"
+                list = "markers"
               />
+              <datalist id="markers">
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5"></option>
+                <option value="6"></option>
+                <option value="7"></option>
+                <option value="8"></option>
+                <option value="9"></option>
+                <option value="10"></option>
+              </datalist>
               <output id="priority-output">5</output>
             </div>
             <div class="buttons">
