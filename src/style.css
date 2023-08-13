@@ -1,9 +1,11 @@
 :root{
     font-size: 22px;
     font-family: 'Open Sans',sans-serif;
-    --alt-color: #6c584c;
-    --bg-color: #f0ead2;
-    --card-color: #ddb892;
+    --alt-color: #a2d2ff;
+    --alt-color-dark: #6ab7ff;
+    --bg-color: #fefae0;
+    --card-color: #faedcd;
+    --sidebar-color: #faedcd;
 
     background-color: var(--bg-color);
 }
@@ -79,7 +81,7 @@ h2{
     flex-direction: column;
     padding-left: 2vw;
     padding-right: 2vw;
-    background-color: #e6ccb2;
+    background-color: var(--sidebar-color);
     border-right: 3px solid var(--alt-color);
 }
 
@@ -124,7 +126,7 @@ h2{
       
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-template-columns: .4fr 1fr;
+    grid-template-columns: .3fr 1fr;
     gap: 0px;
 }
 
@@ -165,7 +167,7 @@ p{
 
 
 button {
-    background-color: #fff000;
+    background-color: var(--alt-color);
     border-radius: 12px;
     color: #000;
     cursor: pointer;
@@ -177,6 +179,7 @@ button {
     box-sizing: border-box;
     border: 0;
     font-size: 1rem;
+    margin-top: 3px;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
@@ -185,7 +188,7 @@ button {
   button:not(:disabled):hover,
   button:not(:disabled):focus {
     outline: 0;
-    background: #f4e603;
+    background: var(--alt-color-dark);
     box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
   }
   
@@ -200,7 +203,7 @@ button {
   }
 
   input[type="radio"] {
-    background-color: white;
+    background-color: var(--bg-color);
     width: 20px;
     height: 20px;
     border-radius: 10px;
@@ -216,7 +219,7 @@ button {
     width: 10px;
     height: 10px;
     border-radius: 6px;
-    background-color: var(--alt-color);
+    background-color: black;
     font-size: 1.2em;
     transform: translate(3px, 3px) scale(0);
     transform-origin: center;
@@ -233,11 +236,12 @@ button {
   select {
     min-width: 3rem;
     width: 14rem;
+    height: 1.2rem;
     border-radius: .5rem;
+    background-color: var(--bg-color);
   }
 
   input[type="range"] {
-    background-color: #434343;
     width: 14rem;
     margin-bottom: 10px;
   }
