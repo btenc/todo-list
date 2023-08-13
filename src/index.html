@@ -40,10 +40,9 @@
             </div>
         </div>
         <div id="form-container">
-          <h2 class="header hidden">Add a Task:</h2>
-          <button id="toggle-button" class="hidden">New Task</button>
-          <form id="add-task-form">
-            <h2 class="header">Add a Task:</h2>
+          <h2 class="header">Add a Task:</h2>
+          <button class="to-hide button toggle-buttons">New Task</button>
+          <form id="add-task-form" class="to-hide hidden">
             <div class="form-item">
               <label for="title">Title:</label>
               <input type="text" id="title" name="title" required />
@@ -53,7 +52,7 @@
               <input type="text" id="description" name="description" required />
             </div>
             <div class="form-item">
-              <label for="due-date">Due Date:</label>
+              <label for="due-date">Due:</label>
               <input type="date" id="due-date" name="due-date" required />
             </div>
             <div class="form-item">

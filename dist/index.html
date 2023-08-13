@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo List</title>
-  <script defer src="main.js?95e85eb72402a041e186"></script></head>
+    <title>What'sTODO</title>
+  <link rel="icon" href="favicon.png?390e958be6c345eb3bac"><script defer src="main.js?390e958be6c345eb3bac"></script></head>
   <body>
     <div id="container">
       <h1 id="header">
@@ -40,10 +40,9 @@
             </div>
         </div>
         <div id="form-container">
-          <h2 class="header hidden">Add a Task:</h2>
-          <button id="toggle-button" class="hidden">New Task</button>
-          <form id="add-task-form">
-            <h2 class="header">Add a Task:</h2>
+          <h2 class="header">Add a Task:</h2>
+          <button class="to-hide button toggle-buttons">New Task</button>
+          <form id="add-task-form" class="to-hide hidden">
             <div class="form-item">
               <label for="title">Title:</label>
               <input type="text" id="title" name="title" required />
@@ -53,7 +52,7 @@
               <input type="text" id="description" name="description" required />
             </div>
             <div class="form-item">
-              <label for="due-date">Due Date:</label>
+              <label for="due-date">Due:</label>
               <input type="date" id="due-date" name="due-date" required />
             </div>
             <div class="form-item">

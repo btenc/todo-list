@@ -12,9 +12,9 @@ function initDisplay() {
       createTask(item, index);
     });
   } else if (taskList.filter == "week-tasks") {
-
+    //TODO
   } else if (taskList.filter == "today") {
-
+    //TODO
   }
 
   function createTask(item, index) {
@@ -58,14 +58,19 @@ function initDisplay() {
     let progressButton = document.createElement("button");
     progressButton.classList.add("button", "progress-button");
     progressButton.textContent = item.progress;
+    progressButton.classList.add(item.progress);
 
     progressButton.addEventListener("click", () => {
       if (item.progress == "Incomplete") {
         item.progress = "Complete";
         progressButton.textContent = "Complete";
+        progressButton.classList.remove("Incomplete");
+        progressButton.classList.add("complete");
       } else {
         item.progress = "Incomplete";
         progressButton.textContent = "Incomplete";
+        progressButton.classList.remove("Complete");
+        progressButton.classList.add("Incomplete");
       }
       initDisplay();
     });

@@ -8,13 +8,11 @@ const dateInput = document.querySelector("#due-date");
 const priorityInput = document.querySelector("#priority");
 const priorityOutput = document.querySelector("#priority-output");
 const submitButton = document.querySelector("#submit-button");
-const cancelButton = document.querySelector("#cancel-button");
 const toggleButtons = document.querySelectorAll(".toggle-buttons");
 const resetButton = document.querySelector("#reset-button");
-
+const toHide = document.querySelectorAll(".to-hide");
 const sortByPriority = document.querySelector("#priority-sort");
 const sortByDate = document.querySelector("#date-sort");
-
 const form = document.querySelector("#add-task-form");
 const applyFilterButton = document.querySelector("#apply-button");
 
@@ -47,9 +45,16 @@ function listenersInit() {
     initDisplay();
   });
 
+  toggleButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      toggleHidden();
+      resetForm();
+      initDisplay();
+    });
+  });
+
   const toListen = [titleInput, descriptionInput, dateInput];
   for (let i = 0; i < 3; i++) {
-    console.log(toListen[i]);
     toListen[i].addEventListener("keyup", () => {
       validateForm();
     });
@@ -90,7 +95,9 @@ function validateForm() {
 }
 
 function toggleHidden() {
-    //todo
+  toHide.forEach((element)=>{
+    element.classList.toggle("hidden");
+  });
 }
 
 function resetForm() {

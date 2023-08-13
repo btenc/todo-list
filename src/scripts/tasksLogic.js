@@ -83,10 +83,7 @@ class Task {
 }
 
 const taskList = new Tasks();
-taskList.addTask("Wordfsk", "do work", "2025-01-05", 3, "Incomplete");
-taskList.addTask("Wordfsk", "do work", "2022-02-05", 2, "Incomplete");
-taskList.addTask("Wordfsk", "do work", "2022-06-05", 5, "Incomplete");
-taskList.addTask("Wordfsk", "do work", "2022-03-05", 1, "Incomplete");
-taskList.addTask("Wordfsk", "do work", "2021-01-05", 9, "Incomplete");
+taskList.addTask("Temporary Task", "this is a temporary task to get you started!", "2099-05-08", 1, "Incomplete");
+
 
 export default taskList;
