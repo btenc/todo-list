@@ -30,17 +30,19 @@ function listenersInit() {
   });
 
   applyFilterButton.addEventListener("click", () => {
-    taskList.filter = document.querySelector('input[name="filter"]:checked').value;
+    taskList.filter = document.querySelector(
+      'input[name="filter"]:checked'
+    ).value;
     console.log(taskList.filter);
     initDisplay();
   });
 
-  sortByPriority.addEventListener("click",()=>{
+  sortByPriority.addEventListener("click", () => {
     taskList.sortType = "priority";
     initDisplay();
   });
 
-  sortByDate.addEventListener("click",()=>{
+  sortByDate.addEventListener("click", () => {
     taskList.sortType = "date";
     initDisplay();
   });
@@ -95,7 +97,7 @@ function validateForm() {
 }
 
 function toggleHidden() {
-  toHide.forEach((element)=>{
+  toHide.forEach((element) => {
     element.classList.toggle("hidden");
   });
 }

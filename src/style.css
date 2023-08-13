@@ -45,9 +45,9 @@
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-.task-card:has(.Complete){
-    opacity: 60%;
-    text-decoration: line-through;
+.task-card:has(.Complete) {
+  opacity: 60%;
+  text-decoration: line-through;
 }
 
 .options {
@@ -171,9 +171,9 @@ p {
   grid-row-start: 2;
 }
 
-.buttons{
-    display: flex;
-    flex-direction: column;
+.buttons {
+  display: flex;
+  flex-direction: column;
 }
 
 button {
@@ -199,8 +199,8 @@ button.remove-button {
   background-color: lightcoral;
 }
 
-button.Complete{
-    background-color: lightgreen;   
+button.Complete {
+  background-color: lightgreen;
 }
 
 button:not(:disabled):hover,
@@ -217,7 +217,7 @@ button.remove-button:not(:disabled):focus {
 
 button.Complete:not(:disabled):hover,
 button.Complete:not(:disabled):focus {
-    background-color: rgb(94, 235, 94);
+  background-color: rgb(94, 235, 94);
 }
 
 button:disabled {

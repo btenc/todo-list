@@ -83,7 +83,12 @@ class Task {
 }
 
 const taskList = new Tasks();
-taskList.addTask("Temporary Task", "this is a temporary task to get you started!", "2099-05-08", 1, "Incomplete");
-
+taskList.addTask(
+  "Temporary Task",
+  "this is a temporary task to get you started!",
+  "2099-05-08",
+  1,
+  "Incomplete"
+);
 
 export default taskList;
