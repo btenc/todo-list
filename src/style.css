@@ -270,6 +270,6 @@ select {
 }
 
 input[type="range"] {
-  width: 14rem;
+  width: 17vw;
   margin-bottom: 10px;
 }
