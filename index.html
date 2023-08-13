@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What'sTODO</title>
-  <link rel="icon" href="favicon.png?390e958be6c345eb3bac"><script defer src="main.js?390e958be6c345eb3bac"></script></head>
+  <link rel="icon" href="favicon.png?146eda1d9438669d70a0"><script defer src="main.js?146eda1d9438669d70a0"></script></head>
   <body>
     <div id="container">
       <h1 id="header">
@@ -15,29 +15,42 @@
       </h1>
       <div id="sidebar">
         <div id="filter-container">
-            <form id="filter-form">
-                <h2 class="filter-options">Filter:</h2>
-                <div class="filter-item">
-                  <input type="radio" checked id="all-tasks" name="filter" value="all-tasks">
-                  <label for="all-tasks">All Tasks</label><br>
-                </div>
-                <div class="filter-item">
-                  <input type="radio" id="today" name="filter" value="today">
-                  <label for="today">Today</label><br>
-                </div>
-                <div class="filter-item">
-                  <input type="radio" id="week-tasks" name="filter" value="week-tasks">
-                  <label for="week-tasks">Next 7 Days</label>
-                </div>
-            </form>
-            <button type="button" id="apply-button" class="button">
-              Apply
-            </button>
-            <div id="sort-buttons">
-                <h2 class="sort-options">Sort By:</h2>
-                <button type="button" id="date-sort" class="button sort-button">Date</button>
-                <button type="button" id="priority-sort" class="button sort-button">Priority</button>
+          <form id="filter-form">
+            <h2 class="filter-options">Filter:</h2>
+            <div class="filter-item">
+              <input
+                type="radio"
+                checked
+                id="all-tasks"
+                name="filter"
+                value="all-tasks"
+              />
+              <label for="all-tasks">All Tasks</label><br />
             </div>
+            <div class="filter-item">
+              <input type="radio" id="today" name="filter" value="today" />
+              <label for="today">Today</label><br />
+            </div>
+            <div class="filter-item">
+              <input
+                type="radio"
+                id="week-tasks"
+                name="filter"
+                value="week-tasks"
+              />
+              <label for="week-tasks">Next 7 Days</label>
+            </div>
+          </form>
+          <button type="button" id="apply-button" class="button">Apply</button>
+          <div id="sort-buttons">
+            <h2 class="sort-options">Sort By:</h2>
+            <button type="button" id="date-sort" class="button sort-button">
+              Date
+            </button>
+            <button type="button" id="priority-sort" class="button sort-button">
+              Priority
+            </button>
+          </div>
         </div>
         <div id="form-container">
           <h2 class="header">Add a Task:</h2>
@@ -64,7 +77,7 @@
                 value="5"
                 class="slider"
                 id="priority"
-                list = "markers"
+                list="markers"
               />
               <datalist id="markers">
                 <option value="1"></option>
@@ -98,9 +111,7 @@
           </form>
         </div>
       </div>
-      <div id="task-board">
-
-      </div>
+      <div id="task-board"></div>
     </div>
   </body>
 </html>
