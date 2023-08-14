@@ -66,7 +66,6 @@ class Tasks {
   }
 
   sortPriority(a, b) {
-    console.log("test");
     if (a.priority > b.priority) {
       return -1;
     }
@@ -118,5 +117,5 @@ function getLocalStorage(){
 
 const taskList = new Tasks();
 getLocalStorage();
-
+console.log(taskList);
 export default taskList;
