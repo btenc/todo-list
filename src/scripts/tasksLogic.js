@@ -75,8 +75,8 @@ class Tasks {
     return 0;
   }
 
-  updateLocalStorage(){
-    localStorage.setItem("taskArr",JSON.stringify(this.taskList));
+  updateLocalStorage() {
+    localStorage.setItem("taskArr", JSON.stringify(this.taskList));
   }
 }
 
@@ -90,9 +90,9 @@ class Task {
   }
 }
 
-function getLocalStorage(){
-  function pullFromStorage(){
-    if(!localStorage.getItem("taskArr")){
+function getLocalStorage() {
+  function pullFromStorage() {
+    if (!localStorage.getItem("taskArr")) {
       taskList.addTask(
         "Temporary Task",
         "this is a temporary task to get you started!",
@@ -100,22 +100,27 @@ function getLocalStorage(){
         1,
         "Incomplete"
       );
-      localStorage.setItem("taskArr",JSON.stringify(taskList));
-    }
-    else{
+      localStorage.setItem("taskArr", JSON.stringify(taskList));
+    } else {
       cleanData();
     }
   }
-  function cleanData(){
-    let taskArr = JSON.parse(localStorage.getItem('taskArr'));
-    for(let i = 0; i < taskArr.length; i++){
-      taskList.addTask(taskArr[i].title,taskArr[i].description,taskArr[i].dueDate,taskArr[i].priority,taskArr[i].progress);
-    };
+  function cleanData() {
+    let taskArr = JSON.parse(localStorage.getItem("taskArr"));
+    for (let i = 0; i < taskArr.length; i++) {
+      taskList.addTask(
+        taskArr[i].title,
+        taskArr[i].description,
+        taskArr[i].dueDate,
+        taskArr[i].priority,
+        taskArr[i].progress
+      );
+    }
   }
   pullFromStorage();
 }
 
 const taskList = new Tasks();
 getLocalStorage();
-console.log(taskList);
+
 export default taskList;
